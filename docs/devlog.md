@@ -34,3 +34,10 @@
 - Setup the first api route to return all products
 - Created a new folder and file for the routes to keep the code clean and readable
 - Bug: the server crashed with "argument handler must be a function". The cause was that products.js wasn't exporting the router. I tracked it down by using node -e to check what the file actually exports, and fixed it by making sure the file ended with module.exports = router.
+
+## Commit 7
+- Created the folder architecture and split the code into routes, controllers and models. I did this because it will make the code easier to maintain and scale. I was also just taught to use this structure in uni.
+- For validation I chose joi because im familiar with how it is used as i just had a lab on using it at uni.
+- Added the rest of the routes to get a product by id, add products, update and delete. However i made it so products with a history cant be deleted because it would mess up the calculations with the stock levels and i wanted there to be a trail of all prodcuts.
+- Chose to use put over patch for now just for thes ease of it, i may add a patch later when the front end is built.
+- I tested all these endpoints with various data using the postman extention.
